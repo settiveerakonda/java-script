@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        height:300px;
+        width: 200px;
+    }
+</style>
+<body>
+    <center>
+        <div style="height:300px;width:800;background-color:none;">
+    <div  style="height: 300px;width:200px;background-color: rgb(255, 223, 205);float: left;"><img src="DSC_0414.jpg" onclick="get_img('DSC_0414.jpg')"></div>
+    <div style="height: 300px;width:200px;background-color: rgb(223, 205, 255);float: left;"><img src="DSC_0417.jpg" onclick="get_img('DSC_0417.jpg')" ></div>
+    <div  style="height: 300px;width:200px;background-color: rgb(236, 24, 154);float: left;"><img src="DSC_0422.jpg"  onclick="get_img('DSC_0422.jpg')"></div>
+    <div id="coming" style="height: 300px;width:200px;background-color:none;float: left;"></div>
+        </div>
+    </center>
+    <script>
+        function get_img(val){
+          document.getElementById("coming").innerHTML= "<img src='"+val+".jpg' style='width:200px';'height:300px;'/>";
+        }
+    </script>
+</body>
+</html>

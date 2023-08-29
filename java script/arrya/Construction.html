@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constroction</title>
+</head>
+<body>
+    <script>
+        class student{
+            constructor(rno,fname,clg){
+                this.roll_no=rno;
+                this.name= fname;
+                this.college=clg;
+            }
+        }
+        let obj =new student(1234,'veera',"acoe")
+        let obj2 =new student(1224,'naveen',"acoe")
+        let obj3 =new student('4i8','sridevi',"acoe")
+    
+        document.write(obj.roll_no," ",obj.name," ",obj.college+"<br>")
+        document.write(obj2.roll_no," ",obj2.name," ",obj2.college+"<br>")
+        document.write(obj3.roll_no," ",obj3.name," ",obj3.college)
+
+
+        // document.write(obj.roll_no+'<br>')
+        // document.write(obj.name)
+        // document.write(obj.college)
+        class cars{
+            constructor(fname,rate,col){
+                this.name=fname;
+                this.amount=rate;
+                this.color=col;
+                this.getfullname = function(){
+                 return this.name+" "+this.amount
+                }
+            }
+        }
+        let veera =new cars('BMW','5000000',"red"+'<br>')
+        let veera1 =new cars('tata','6000000',"red"+'<br>')
+        let veera2 =new cars('royal','7000000',"red"+'<br>')
+
+        document.write(veera.name,veera.amount,veera.color+"<br>")
+        document.write(veera1.name,veera1.amount,veera1.color+"<br>")
+        document.write(veera2.name,veera2.amount,veera2.color+"<br>")
+
+
+    </script>
+</body>
+</html>

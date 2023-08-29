@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regular Expression</title>
+</head>
+<body>
+    <script>
+        let re =/batch/;
+        let output =re.test("fullstack batch")
+        if(output == true){
+            console.log("valid")
+        }else{
+            console.log("not a valid")
+        }
+        console.log(output);
+
+        let re1 =/batch/i;
+        let output1 =re1.test("fullstack BATCH")
+        console.log(output1)
+       
+        re = /batch/g;
+        res =re.exec("full stack batch course batch");
+        console.log(res);
+ 
+        res =/^[0-9]{10}/     //valid upto 10 number but exceeded the range
+        re =/^[0-9] {10}$/
+        re =/^[9][]
+    </script>
+</body>
+</html>

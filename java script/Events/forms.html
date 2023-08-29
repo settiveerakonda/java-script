@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<style>
+    body{
+        background-color: aqua;
+    }
+</style>
+<body>
+    <h1>This is Html forms</h1>
+    <form id="myForm" onsubmit="return validateForm()" method="post">
+            Name:<input type="text" placeholder="Enter your name" autocomplete="off" name="text" id="a1">
+        <br>
+        <br> 
+            password:<input type="password" name="myname" id="b1">
+        <br>
+         <br>
+            Roll no:<input type="number" name="number" id='c1' ><br>
+        <br>
+            Email:<input type="mail"Name="mymail"id="d"><br>
+    <br>
+        
+            gmail:<input type="text" name="mygail"id="e"><br>
+    <br>
+       phone:<input type="number" range="9" name="name"id="f"><br>
+<br>
+        Date:<input type="date"Name="mydate"id="h"><br>
+    <br>
+        <input type="Submit" value="Submit"><br>
+        <br>
+        Gender:Male<input type="radio"Name="mygender"id="j">female<input type="radio"Name="mygender"id="j">other<input type="radio"Name="mygender"id="j">    <br>
+    <br>
+        write about youself?:<br><textarea Name="mytext" cols="90" rows="10" width="30px"id="k"></textarea><br>
+    <a id="l" href="table and list.html">about</a><br>
+     checkbox:<input type="checkbox" class="checkbox"id="l1">
+    <br>
+        <input type="reset"id="m"><br>
+    <br>
+       <input type="text file" name="myname" id="n">
+    <br><br>
+    college name<select  name="selectcollege" id="o">college name
+<option value="ace">acoe</option>
+<option value="">acet</option>
+<option value="">aeoc</option> 
+</form>
+</body>
+<script>
+    function ValidateFome(){
+        let text=document.getElementById('a1').value;
+        let myname=document.getElementById('b1').value;
+        let number=document.getElementById('c1').value;
+        let mymail=document.getElementById('d').value;
+        let mygail=document.getElementById('e').value;
+        let name=document.getElementById('f').value;
+        let mydate=document.getElementById('g').value;
+        let mygender=document.getElementById('j').value;
+        let mytext=document.getElementById('k').value;
+        let checkbox=document.getElementById('l1').value;
+        let selectcollege=document.getElementById('a1').value;
+
+    if( text== ''){
+    alert("please enter name");
+    return false;
+        }
+    if(myname== ''){
+    alert("please enter first name");
+    return false;
+    }
+    if(number == ''){
+    alert("please enter first name");
+    return false;
+    }
+    if(mymail == ''){
+    alert("please enter first name");
+    return false;
+    }
+    if(mygmail == ''){
+    alert("please enter first name");
+    return false;
+    }
+    if(name == ''){
+    alert("please enter first name");
+    return false;
+    }
+    if(mydate == ''){
+    alert("please enter first name");
+    return false;
+    }
+    if(mygender == ''){
+    alert("please enter first name");
+    return false;
+    }
+    if(mytext == ''){
+    alert("please enter first name");
+    return false;
+    }
+    if(checkbox == ''){
+    alert("please enter first name");
+    return false;
+    }
+    if(selectcollege == ''){
+    alert("please enter first name");
+    return false;
+    }
+    }
+    
+    // function  sample(){
+    //     document.getElementById("my form").submit()
+    // }
+    // function  resetform(){
+    //     document.getElementById("my form").reset()
+    // }
+    // function a1(){
+    //     document.getElementById()
+    // }
+</script>
+</html>

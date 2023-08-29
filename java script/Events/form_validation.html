@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body{
+      background-color: aqua;
+    }
+  </style>
+<body>
+<p>Enter some text in the fields below, then press the "Submit form" button to submit the form.</p>
+
+<form id="myForm" onsubmit="return validateForm()" method="post">
+  First name: <input type="text" name="fname" id="fname_id"><br><br>
+  Last name: <input type="text" name="lname" id="lname_id"><br><br>
+  password:<input type="password" name="myname" id="b1"><br><br>
+  Roll no:<input type="number" name="number" id='c1' ><br><br>
+  Email:<input type="mail"Name="mymail"id="d"><br><br>
+  gmail:<input type="text" name="mygmail"id="e"><br><br>
+  phone:<input type="number" range="9" name="name"id="f"><br><br>
+  Date:<input type="date"Name="mydate"id="h"><br><br>
+  Gender:Male<input type="radio"Name="mygender"id="j">female<input type="radio"Name="mygender"id="j">other<input type="radio"Name="mygender"id="j"><br><br>
+  write about youself?: <br>  <textarea Name="mytext" cols="90" rows="10" width="30px"id="k"></textarea><br><br>
+
+  <select name="colleges" id="clg_id">
+  	<option value="">--select colleges ---</option>
+  	<option value="AEC">AEC</option>
+  	<option value="ACET">ACET</option>
+  	<option value="ACOE">ACOE</option>
+  </select><br><br>
+  <input type="submit" value="Submit">
+
+</form>
+
+<script>
+function validateForm(){
+  let fname = document.getElementById('fname_id').value;
+  let lname = document.getElementById('lname_id').value;
+  let myname = document.getElementById('b1').value;
+  let number = document.getElementById('c1').value;
+  let mymail = document.getElementById('d').value;
+  let mygmail = document.getElementById('e').value;
+  let name = document.getElementById('f').value;
+  let mydate = document.getElementById('h').value;
+  let mygender = document.getElementById('j').value;
+  let mytext = document.getElementById('k').value;
+  let clg = document.getElementById('clg_id').value;
+
+  if(fname == ''){
+    alert("please enter first name");
+    return false;
+  }
+  if(lname == ''){
+    alert("please enter last name");
+    return false;
+  }
+ 
+  if(myname == ''){
+    alert("please choose password");
+    return false;
+  }
+  if(number == ''){
+    alert("please choose roll_no");
+    return false;
+  }
+	if(mymail == ''){
+    alert("please choose mali");
+    return false;
+  }
+  if(mygmail == ''){
+    alert("please choose gmail");
+    return false;
+  }
+  if(name == ''){
+    alert("please choose phone-no");
+    return false;
+  }
+  if(mydate == ''){
+    alert("please choose phone-no");
+    return false;
+  }
+  if(mygender == ''){
+    alert("please choose mygender");
+    return false;
+  }
+  if(mytext == ''){
+    alert("please choose mytext");
+    return false;
+  }
+  if(clg == ''){
+    alert("please choose college");
+    return false;
+  }
+}
+
+</script>
+
+</body>
+</html>

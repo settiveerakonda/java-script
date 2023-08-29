@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+   
+    <script>
+        function text(){
+          document.write("test");
+        }  
+        text()
+
+        // scanna your id 
+        let id = prompt('scan your id');
+        function getrollnobyscan(roll_no){
+            document.write(roll_no);
+        }
+        getrollnobyscan(id)
+
+        // function witha argument
+        function sum(num1,num2){
+            document.write(num1+num2)
+        }
+        sum(10,20)
+        document.write("<br>")
+        // anonymous function.
+        var num1= function(num){
+            return (num*10)
+        }
+        document.write(num1(10))
+
+        // arrow function
+        document.write("<br>")
+        mul = (num1,num2) =>{
+            document.write(num1*num2)
+        }
+        mul(20,3)
+
+        // arrow function with one argument
+        getid = roll_no =>{
+            document.write(roll_no)
+        }
+        getid(38764)
+        // arrow function with on argument
+        document.write("<br>")
+        getid = _ =>{
+            document.write(_)
+        }
+        getid('ghfvhvhb')
+        // call back function is a function as an argument inside of the another function
+       setTimeout(test1,2000)
+        function test1(){
+            document.write("execute after 2 sec")
+        }
+0
+  </script>
+</body>
+
+</html>

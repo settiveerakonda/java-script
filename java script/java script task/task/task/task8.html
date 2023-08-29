@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 8</title>
+</head>
+<body>
+    <button onclick="sub()">sub</button>
+    <button onclick="add()">add</button>
+    <p id="demo"></p>
+    <script>
+        var a=parseInt(prompt("enter number a"));
+        var b=parseInt(prompt("enter number b"));
+        function add(){
+            document.getElementById("demo").innerText=(a+b);
+        }
+        function sub(){
+            document.getElementById("demo").innerText=(a-b);
+        }
+    </script>
+</body>
+</html>

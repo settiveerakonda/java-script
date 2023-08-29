@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    <h1>java script introduction</h1>
+    <!-- external file -->
+    <script type="text/javascript" src="introduction.js">
+</script>
+<script>
+    // Element Internal
+    var a=12
+    document.write("value is a:",a);
+     document.write("<br>");
+    //  1
+    var name = '  nani';
+    document.write(" name:", name)   
+    document.write("<br>");
+    var a=5;
+    b=4
+    c=a+b
+    document.write("value a:",c)
+    // different varible.
+    document.write("<br>");
+    var a='veera';
+    b='konda';
+    c='&setti'
+  d=a+b+c;
+  document.write(d);
+  document.write("<br>");
+//   only single  varible
+// veera konda
+  var  na='veera';
+  document.write(na.length);
+     na += 'konda';
+  document.write(na);
+  document.write("<br>");
+  document.write("<br>");
+  document.write("<br>");
+</script>
+<script>
+var s= 'nani'
+var a= 10;
+var b= 20;
+alert(s);
+document.write(a);
+console.log(b)
+document.write("<br>");
+document.write("<br>");
+var arr=[10,'veera',30]
+document.write(arr);
+document.write("<br>");
+document.write("<br>");
+var a='veera'
+document.write(typeof(a)+"<br>")
+var b='true'
+document.write(typeof(b)+"<br>")
+document.write("<br>");
+var arr=[20,"veera",30]
+document.write(arr[0]);
+</script>
+<script>
+document.write("<br>");
+document.write("<br>");
+// we a single trineer na data 
+var trainee ={
+    'name':'veera',
+    'roll_no':1234,
+    'college':'aco',
+    'branch' : 'ece'
+    }
+    console.log(trainee.name);
+    console.log(trainee.roll_no);
+    console.log(trainee.college);
+    console.log(trainee.branch);
+
+// we hava a multi trinner a data.
+var trainees =[{
+    'name':'veera',
+    'roll_no':1234,
+    'college':'aco',
+    'branch' : 'ece'
+},
+{    'name':'nani',
+    'roll_no': 1234,
+    'college': 'aco',
+    'branch' : 'ece'
+
+}]
+console.log(trainees[0].name);
+console.log(trainees[1].name);
+</script>
+
+<script>
+    document.write("<br>");
+document.write("<br>");
+    // 5 members data will be print
+    var trainees ={
+    'name':'veera',
+    'roll_no':1234,
+    'college':'aco',
+    'branch' : 'ece'
+},
+// {    'name':'nani',
+//     'roll_no': 787,
+//     'college': 'aco',
+//     'branch' : 'ece'
+
+// },
+// {
+//     'name':'smith',
+//     'roll_no':274,
+//     'college':'aco',
+//     'branch' : 'ece'
+// },
+// {    'name':'dhoni',
+//     'roll_no': 9802,
+//     'college': 'aco',
+//     'branch' : 'ece'
+
+// }]
+// for(var i=0;i < trainees.length;i++){
+//     // document.write((i+1)+". "+trainees[i].name+". "+trainees[i].roll_no+". "+trainees[i].college+". "+trainees[i].branch)
+  
+
+// }let txt = "";
+for (let x in trainees) {
+  txt += person[x] + " ";
+}
+document.getElementById("demo").innerHTML = txt;
+</script>
+</body>
+</html> 

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1px"cellspacing="0">
+        <tr>
+            <td>d</td>
+            <td>r</td>
+            <td>i</td>
+            <td>v</td>
+            <td>e</td>
+            <td>&nbsp</td>
+            <td>r</td>
+            <td>e</td>
+            <td>a</td>
+            <td>d</td>
+            <td>y</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+    </table>
+    <script>
+        // let str='veera konda';
+        // document.write(typeof(str));
+        
+        // let str1= new String ('veera konda');
+        // document.write(typeof(str1));
+        // document.write("<br>");
+
+        let str= 'veera konda';
+        function ss(str_name){
+        document.write("<b>"+str_name+"<b><br>");
+        }
+ss("orginal string = "+str)
+ss("orginal length = "+str.length)
+ss("orginal string = "+str[2])
+ss("chat At method = "+str.charAt(3))
+ss("index of = "+str.indexOf('r'))
+ss("Last index of = "+str.lastIndexOf('r'))
+
+let str1 ='   simhadri    ';
+ss("trim method ="+str1.trim())  //remove the space from left and right
+
+let str2 ='simhadri';
+ss("trim method ="+str2.toLowerCase())  //remove the space from lowercass
+
+let str3 ='simhadri';
+ss("trim method ="+str3.toUpperCase())  //remove the space from uppercase
+
+let str4 ='veera';
+let str5 =' konda';
+let str6='nani'
+ss("concate string ="+str4.concat(str5,str6))//adding string usuing in concate
+
+let str7='nani'
+ss("includes method ="+str7.includes('batch')) //true   includes
+ss("includes method ="+str7.includes('afternoon')) //false
+
+let str8='veera konda';
+
+
+
+    </script>
+</body>
+</html>

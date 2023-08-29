@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body id="nn">
+    <table border="1px">
+    <header>
+<tr>
+    <th>Course name</th>
+    <th>Course number</th>
+    <th>Course fees</th>
+    <th>Course place</th>
+</tr>
+    </header>
+    </body>
+    <script>
+        var a = [{
+            "name":"HTML",
+            'NUMBER':23455,
+            'FEES':235,
+            'PLACE':'DWP'
+        },
+    {
+            "name":"HTML",
+            'NUMBER':23455,
+            'FEES':235,
+            'PLACE':'DWP' 
+    }
+,{
+            "name":"HTML",
+            'NUMBER':23455,
+            'FEES':235,
+            'PLACE':'DWP'
+}]
+    for ( index = 0; index < a.length; index++) {
+       
+        let tr = document.createElement('tr');
+        let td1 = document.createElement('td');
+        let td2 = document.createElement('td');
+        let td3 = document.createElement('td');
+        let td4 = document.createElement('td');
+        console.log('td')
+        td1.innerText = couses[index].name
+        td2.innerText = couses[index].NUMBER
+        td3.innerText = couses[index].FEES
+        td4.innerText = couses[index].PLACE
+        tr.append(td1)
+        tr.append(td2)
+        tr.append(td3)
+        tr.append(td4)
+        document.getElementById('nn')
+
+
+
+        
+
+
+    }
+    </script>
+</table>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>string</title>
+</head>
+<body>
+	<script>
+const g = "Hello, world!";
+const g1 = g.substr(7, 2); // Starts at index 7 and extracts 5 characters
+document.write(g1);
+document.write('<br>')
+
+const h1 = "Hello, ";
+const h2 = "world!";
+const combined = h1.concat(h2); 
+document.write(combined); // Outputs: "Hello, world!"
+document.write('<br>') 
+
+var a = "Hello, world!";
+document.write(a.substring( 0,5)); // Outputs: "Hello"
+document.write('<br>') 
+
+const i = "Hello, world!";
+const lastIndex = i.lastIndexOf("l");
+document.write(lastIndex); // Outputs: 10
+document.write('<br>')
+
+var d = "Hello, world!";
+var newStr = d.replace("world", "universe");
+document.write(newStr); // Outputs: "Hello, universe!"
+document.write('<br>') 
+
+const str = "Hello";
+document.write(str.charAt(0)); // Outputs: "H"
+document.write(str.charAt(3));
+document.write('<br>') // Outputs: "l"
+
+const k = "Hello, world";
+const index = k.search(/world/);
+document.write(index); // Outputs: 7
+document.write('<br>')
+
+
+const f = "   Hello   ";
+document.write(f.trim()); // Outputs: "Hello"
+document.write('<br>')
+
+
+var b = "Hello";
+document.write(b.toUpperCase()); // Outputs: "HELLO"
+document.write(b.toLowerCase()); // Outputs: "hello"
+document.write('<br>') 
+
+const w = "Hello";
+document.write(w.charAt(0)); // Outputs: "H"
+document.write(w.charAt(3));
+document.write('<br>') // Outputs: "l"
+
+const l = new String("Hello");
+const primitiveValue = l.valueOf();
+document.write(primitiveValue); // Outputs: "Hello"
+document.write('<br>')
+
+var c = "Hello, world!";
+document.write(c.indexOf("world")); // Outputs: 7
+document.write('<br>') 
+
+const e = "apple,banana,orange";
+const fruits = e.split(",");
+document.write(fruits); // Outputs: ["apple", "banana", "orange"]
+document.write('<br>') 
+
+const m = "Hello, world!";
+document.write(m.includes("world")); // Outputs: true
+document.write('<br>')
+
+const n= "Hello";
+const strToString = n.toString();
+document.write(strToString); // Outputs: "Hello"
+document.write('<br>')
+
+const o = "Hello, world!";
+const sliced = o.slice(7, 12); // Starts at index 7 and stops before index 12
+document.write(sliced); // Outputs: "world"
+document.write('<br>')
+
+const p= "Hello, world!";
+const matches = p.match(/o/g); // Matches all occurrences of 'o'
+document.write(matches); // Outputs: ["o", "o", "o"]
+
+	</script>
+</body>
+</html>

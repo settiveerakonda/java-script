@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Table with Add, Edit, and Delete</title>
+</head>
+<style>
+  th{
+    background-color:rgb(16, 238, 116) ;
+    color: aliceblue;
+  }
+  td{
+    background-color: bisque;
+    color: black;
+    
+  }
+    #na{
+        margin-left: 20px;
+        color: rgb(247, 6, 6);
+    }
+    #aa{
+        margin-left: 10px;
+        color: orange;
+    }
+    th,td{
+        height: 50px;
+        width: 100px;
+    }
+    #mm{
+        margin-left: 330px;
+        margin-bottom: 10px;
+        background-color: blue;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <h1>product details</h1>
+    <button onclick="addRow()"id=mm>Add Row</button>
+  <table id="data-table" border="1" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Product_id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>456789</td>
+        <td>realme noice</td>
+        <td>16000</td>
+         <td><i onclick="editRow(this)" class="fa-solid fa-pen"id="aa"></i> <i onclick="deleteRow(this)" class="fa-solid fa-trash" id="na"></i></td> 
+         <!-- <td><button onclick="editRow(this)"><i class="fa-solid fa-pen"id="aa"></i></button> <button onclick="deleteRow(this)">Delete</button></td> --> 
+      </tr>
+      <tr>
+        <td>123456</td>
+        <td>mi mobile</td>
+        <td>18000</td>
+        <td><i onclick="editRow(this)" class="fa-solid fa-pen"id="aa"></i> <i onclick="deleteRow(this)" class="fa-solid fa-trash" id="na"></i></td>
+
+        <!-- <td><button onclick="editRow(this)">Edit</button> <button onclick="deleteRow(this)">Delete</button></td> -->
+      </tr>
+      <tr>
+        <td>356787</td>
+        <td>vivo mobile</td>
+        <td>20000</td>
+        <td><i onclick="editRow(this)" class="fa-solid fa-pen"id="aa"></i> <i onclick="deleteRow(this)" class="fa-solid fa-trash" id="na"></i></td>
+
+        <!-- <td><button onclick="editRow(this)">Edit</button> <button onclick="deleteRow(this)">Delete</button></td> -->
+      </tr>
+    </tbody>
+  </table>
+  <br>
+ 
+
+  <script>
+    function addRow() {
+      var table = document.getElementById("data-table").getElementsByTagName('tbody')[0];
+      var newRow = table.insertRow(table.rows.length);
+      var nameCell = newRow.insertCell(0);
+      var emailCell = newRow.insertCell(1);
+     var Pricecell = newRow.insertCell(2);
+      var actionCell = newRow.insertCell(3);
+      
+      nameCell.innerHTML = '<input type="text" name="name">';
+      emailCell.innerHTML = '<input type="text" name="email">';
+      Pricecell.innerHTML ='<input type="text" name="number">';
+    actionCell.innerHTML = '<i id="dome1" onclick="saveRow(this)" class="fa-solid fa-bars"> <i onclick="deleteRow(this)"class="fa-solid fa-trash" id="demo"></i>';
+    // actionCell.innerHTML ='<i id="dome1" onclick="saveRow(this)" class="fa-solid fa-bars"></i><i onclick="cancelEdit(this)"class="fa-solid fa-trash" id="demo"></i>'
+    //  actionCell.innerHTML = '<button onclick="saveRow(this)"><i class="fa-solid fa-bars"></i></button> <i onclick="cancelEdit(this)"><i class="fa-solid fa-trash" id="demo"></i></i>';
+    
+    document.getElementById('demo').style.color='red';
+    document.getElementById('demo').style.marginLeft='30px';
+
+    //  document.getElementById('domo1').style.backgroundColor='green';
+    //  document.getElementById('domo1').style.marginLeft='20px'
+
+    }
+
+    function editRow(button) {
+      var row = button.parentNode.parentNode;
+      var nameCell = row.cells[0];
+      var emailCell = row.cells[1];
+      var pricecell = row.cells[2];
+      // var actionCell = row.cells[3];
+
+      var nameValue = nameCell.textContent;
+      var emailValue = emailCell.textContent;
+      var priceValue = pricecell.textContent;
+      // var actionValue = actionCell.textContent;
+      
+
+
+      
+     let a= nameCell.innerHTML = '<input type="text" name="name" value="' + nameValue + '">';
+     let b= emailCell.innerHTML = '<input type="text" name="email" value="' + emailValue + '">';
+     let c= pricecell.innerHTML = '<input type="text" name="price" value="' + priceValue + '">';
+      //  actionCell.innerHTML = '<i onclick="updateRow(this)" class="fa-solid fa-bars" ></i> <i onclick="deleteRow(this)"class="fa-solid fa-trash" id="demo" ></i>';
+      // actionCell.innerHTML = '<button onclick="updateRow(this)">Update</button> <button onclick="cancelEdit(this)">Cancel</button>';
+      // document.getElementById('demo').style.color='red';
+      // document.getElementById('demo').style.marginLeft='30px';
+   let d =(a,b,c,d)
+   prompt(d)
+    }
+
+    function updateRow(button) {
+      var row = button.parentNode.parentNode;
+      var name = row.querySelector('input[name="name"]').value;
+      var email = row.querySelector('input[name="email"]').value;
+      var price = row.querySelector('input[name="price"]').value;
+      // var action = row.querySelector('input[name="action"]').value;
+
+      
+      row.cells[0].textContent = name;
+     row.cells[1].textContent = email;
+     row.cells[2].textContent = price;
+    //  row.cells[3].textContent = action;
+
+     
+    row.cells[3].innerHTML = '<i onclick="editRow(this)" class="fa-solid fa-bars"></i> <i onclick="deleteRow(this)" class="fa-solid fa-trash" id="demo"></i>';
+  //   // row.cells[2].innerHTML = '<button onclick="editRow(this)">Edit</button> <button onclick="deleteRow(this)">Delete</button>';
+     
+    document.getElementById('demo').style.color='red';
+    document.getElementById('demo').style.marginLeft='30px';
+
+  }
+
+    function cancelEdit(button) {
+      var row = button.parentNode.parentNode;
+      var nameValue = row.cells[0].querySelector('input[name="name"]').getAttribute('value');
+      var emailValue = row.cells[1].querySelector('input[name="email"]').getAttribute('value');
+      var priceValue = row.cells[2].querySelector('input[name="price"]').getAttribute('value');
+      // var actionValue = row.cells[3].querySelector('input[name="action"]').getAttribute('value');
+
+     
+      
+      row.cells[0].textContent = nameValue;
+      row.cells[1].textContent = emailValue;
+      row.cells[2].textContent = price;
+     row.cells[3].innerHTML = '<i  onclick="editRow(this)" class="fa-solid fa-bars"></i> <i onclick="deleteRow(this)"class="fa-solid fa-trash" id="demo"></i>';
+     document.getElementById('demo').style.color='red';
+    document.getElementById('demo').style.marginLeft='30px';
+      //   row.cells[3].innerHTML = '<button onclick="editRow(this)">Edit</button> <button onclick="deleteRow(this)">Delete</button>';
+    }
+
+    function deleteRow(button) {
+       var a=confirm('Do you want to delete the recode')
+            if (a==true){
+      var row = button.parentNode.parentNode;
+      row.parentNode.removeChild(row);
+        }
+        else{
+            var row = button.parentNode.parentNode;
+      row.parentNode.editRow(row);
+        }
+        }
+  </script>
+</body>
+</html>
+</body>
+</html>

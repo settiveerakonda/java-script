@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>calculator</title>
+	<style>
+td{
+	text-align: center;
+	font-weight: bold;
+	border: 1px solid #efe1e1;
+	height: 100px;
+	width :100px;
+	color: rgb(223, 224, 216);
+	border-radius: 30px;
+	font-size: 40px;
+}
+td:not(#result_id){
+	cursor: pointer;
+}
+#result_id{
+	text-align: right;
+	background-color: rgb(224, 235, 69);
+	color: black;
+     
+}
+#v{
+	background-color: rgb(120, 241, 246);
+	color: black;
+}
+#n{
+	background-color: beige;
+	color: black;
+}
+
+	</style>
+</head>
+<body>
+	<center>
+		<h1>calculator</h1>
+	<table border="1px" style="background-color: black;border-radius:20px ;">
+  <tr>
+	<td colspan="4".style="height:70px;width:190;"id='result_id'> </td>
+  </tr>
+  <tr>
+	<td onclick="getnum('9')">9</td>
+	<td  onclick="getnum('8')">8</td>
+	<td  onclick="getnum('7')">7</td>
+	<td id="n"  onclick="getnum('/')">/</td>
+  </tr>
+  <tr>
+	<td  onclick="getnum('6')">6</td>
+	<td onclick="getnum('5')">5</td>
+	<td onclick="getnum('4')">4</td>
+	<td id="n"  onclick="getnum('*')">*</td>
+  </tr>
+  <tr>
+	<td onclick="getnum('3')">3</td>
+	<td onclick="getnum('2')">2</td>
+	<td onclick="getnum('1')">1</td>
+	<td id="n"  onclick="getnum('-')">-</td>
+  </tr>
+  <tr>
+	<td onclick="getnum('0')">0</td>
+	<td id="n"  onclick="Clear('c')">c</td>
+	<td id='v'onclick="getnum('=')">=</td>
+	<td id="n"  onclick="getnum('+')">+</td>
+  </tr>
+	</table>
+</center>
+	<script>
+		function getnum(val){
+			if (val == '='){
+				let res =document.getElementById('result_id').innerText;
+				document.getElementById('result_id').innerText = eval(res)
+			}
+			else{
+				document.getElementById('result_id').innerText +=val;
+			}
+		}
+               function Clear(){
+				document.getElementById('result_id').innerText ='';
+			}
+		
+			
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- function getnum(val){
+	if (val == '='){
+		let res = document.getElementById('result_id').innerText;
+		document.getElementById('result_id').innerText = eval(res);
+				}else{
+					document.getElementById('result_id').innerText += val;
+				}
+			} -->

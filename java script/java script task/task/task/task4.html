@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 4</title>
+</head>
+<body>
+    <script>
+        var n=prompt("enter size of array");
+        n=parseInt(n);
+        var arr=[];
+        for(let i=0;i<n;i++)
+        {
+            arr.push(parseInt(prompt("enter value")));
+        }
+        document.write(arr+"<br>")
+        var oddsum=0,evensum=0;
+        for(var i in arr)
+        {
+            if(arr[i]%2)oddsum+=arr[i];
+            else evensum+=arr[i];
+        }
+        document.write("odd sum is "+oddsum+"<br>");
+        document.write("even sum is "+evensum+"<br>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 6</title>
+</head>
+<body>
+    <script>
+        var n=parseInt(prompt("enter number to print fibonacci sequence"));
+        document.write("fibonacci upto give number are<br>");
+        var a=0,b=1;
+        var c=0;
+        while(n--)
+        {
+            document.write(a+"<br>");
+            c=a+b;
+            a=b;
+            b=c;
+        }
+    </script>
+</body>
+</html>

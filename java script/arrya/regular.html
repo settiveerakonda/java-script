@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Regular Expression</h1>
+    <input type="text" name="" id="in">
+    <button onclick="check_numornot()">check valid</button> <!-- Added parentheses here -->
+    <br>
+    <span id="msg_id"></span>
+    <script>
+        function check_numornot() {
+            let re = /^[9][0-9]{9}$/; // Removed space inside the regex and added a semicolon at the end
+            let n = document.getElementById('in').value;
+            let output = re.test(n);
+            if (output === true) {
+                document.getElementById('msg_id').innerText = 'correct';
+                document.getElementById('msg_id').style.color = "green";
+            } else {
+                document.getElementById('msg_id').innerText = 'please enter correct format'; // Corrected the spelling of "format"
+                document.getElementById('msg_id').style.color = 'red';
+            }
+        }
+      
+    </script>
+</body>
+</html> 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        height: 100px;
+        width: 100px;
+    }
+</style>
+<body>
+    <img src="DSC_0414.jpg" onclick="getImage('DSC_0414.jpg')">
+    <img src="DSC_0417.jpg" onclick="getImage('DSC_0417.jpg')">
+    <img src="DSC_0418.JPG" onclick="getImage('DSC_0418.jpg')">
+    <div id="main"></div>
+    
+</body>
+<script>
+    function getImage(val){
+          document.getElementById('main').innerHTML="<img src='"+val+"'/>"
+    }
+</script>
+</html>

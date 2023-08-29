@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 9</title>
+</head>
+<body>
+    <button onclick="mul()">mul</button>
+    <button onclick="div()">div</button>
+    <p id="demo"></p>
+    <script>
+        var a=parseInt(prompt("enter number a"));
+        var b=parseInt(prompt("enter number b"));
+        mul=()=>{
+            document.getElementById("demo").innerText=(a*b);
+        }
+        div=()=>{
+            document.getElementById("demo").innerText=(a/b);
+        }
+    </script>
+</body>
+</html>

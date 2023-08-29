@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events | task</title>
+	<style type="text/css">
+		button{
+			border: 2px solid green;
+			padding: 10px;
+			background: green;
+			width: 100px;
+			border-radius: 10px;
+			font-size: 15px;
+			font-weight: bold
+		}
+		ul{
+             background-color: red;
+			
+		}
+		li{
+			float:right;
+			list-style: none;
+			padding: 30px 30px;
+			font-size: large;
+		}
+		li:hover{
+            color: aqua;
+			font-size: 25px;
+		}
+		#b{
+			background-color: black;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<head>
+		<ul class="navigartion">
+			<li>Home</li>
+			<li>about</li>
+			<li>academic</li>
+			<li>Department</li>
+			<li>R & D</li>
+			<li>placement</li>
+		</ul>
+		<ul>
+			<img src="logo.png" alt="">
+		</ul>
+	</head>
+<marquee id="b" behavior="" direction="top">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel omnis fuga sint sapiente! Illum ipsa laboriosam autem repudiandae molestiae non, consequatur quo ducimus voluptatum repellat, quos distinctio! Cumque, similique laborum!</marquee>
+	<center>
+		
+		<p id="output_id">
+			<img src="1.jpg" style="width: 1350px;height: 500px;"/>
+		</p>
+		<button onclick="nextslide()">Next</button>
+		<button onclick="prevslide()">Prev</button> 
+	</center>
+	<script>
+		var i = 1;
+		setInterval(nextslide,3000)
+		// setInterval(prevslide,2000)
+		function nextslide(){
+			if(i<10){
+				var res = ++i
+				document.getElementById('output_id').innerHTML = "<img src='"+res+".jpg' style='width:1350px;height:500px;' />";
+			}			
+		}
+		function prevslide(){
+			if(i>1){
+				var res = --i
+				document.getElementById('output_id').innerHTML = "<img src='"+res+".jpg' style='width:1350px;height:500px;' />";
+			}			
+		}
+	</script>
+</body>
+</html>
+<!-- <button onclick="nextslide()">Next</button>
+		<button onclick="prevslide()">Prev</button> -->

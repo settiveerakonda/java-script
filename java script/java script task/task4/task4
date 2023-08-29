@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> arrays </title>
+</head>
+<body>
+	<script type="text/javascript">
+		let friends=['veera','nani','smith'];
+		let arr1=friends.map(function(ele,index,old_arr){
+			return "No1waste"+ele
+		})
+		document.write(arr1+"<br>")
+		let arr=[15,18,19,20,50,70]
+		function cheult(num) {
+
+  			return num >= 18;
+
+			}
+		let age=arr.filter(cheult);
+		document.write(age+"<br>")
+		let viv=[32,65,5751,457]
+		function check(dig){
+			return dig;
+		}
+		let arr2=viv.sort(check);
+		document.write(arr2+"<br>")
+		let salaries =[40000,25000,30000];
+		document.write(salaries+"<br>");
+		salaries.forEach(function (amount,index,arr) {
+			// body...
+			var increment =amount/10;
+			document.write(increment+"<br>")
+			arr[index]=amount+increment;
+		});
+		document.write(salaries+"<br>");
+		const c = ["naveen"];
+		const v = ["sridevi"];
+		const cv = c.concat(v); 
+		document.write(cv+"<br>")
+		let a=[15,18,19,20,50,70]
+		function cheult(num) {
+  			return num;
+			}
+		let ag=a.every (cheult);
+		document.write(ag+"<br>")
+		let z=[15,18,19,20,50,70]
+		function cheult(num) {
+  			return num < 20;
+			}
+		let agg=z.some (cheult);
+		document.write(agg+"<br>")
+		let fruits=["mango","orange","grapes"]
+		let output=fruits.includes("piapple")
+		document.write(output+"<br>")
+		let cars=["bmw ","volvo ","skoda "]
+		let out=cars.join("and ")
+		document.write(out+"<br>")
+		const num=[175,50,25]
+		function fun(total,num) {
+			// body...
+			return total-num;
+		}
+		let bb=num.reduce(fun)
+		document.write(bb+"<br>")
+		let h=[15,18,19,20,50,70]
+		function cheult(num) {
+
+  			return num >= 18;
+
+			}
+		let m=h.find(cheult);
+		document.write(m+"<br>")
+		let o=[15,18,19,20,50,70]
+		function cheult(num) {
+
+  			return num >= 18;
+
+			}
+		let p=o.findIndex(cheult);
+
+		document.write(p+"<br>")
+		let fru=["orange","mango","lemon"]
+		let put=fru.indexOf("lemon")
+		document.write(put+"<br>")
+		let fr=["orange","mango","lemon"]
+		let pt=fr.fill("apple")
+		document.write(pt+"<br>")
+		let f=["orange","mango","lemon"]
+		let t=f.slice(1,3)
+		document.write(t+"<br>")
+		let lk=["orange","mango","lemon"]
+		let j=lk.reverse()
+		document.write(j+"<br>")
+		let lko=["mango","dragonfruit","kiwi"]
+		let jo=lko.push("hi")
+		document.write(jo+"<br>")
+		let lkoo=["mango","dragonfruit","kiwi"]
+		let joo=lkoo.pop("hi")
+		document.write(joo+"<br>")
+		let lkooo=["mango","dragonfruit","kiwi"]
+		let jooo=lkooo.shift("")
+		document.write(jooo+"<br>")
+		let lkoooo=["mango","dragonfruit","kiwi"]
+		let joooo=lkoooo.unshift("")
+		document.write(joooo+"<br>")
+	</script>
+
+</body>
+</html>

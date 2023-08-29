@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>spread opration</h2>
+    <p>it takes an iteration and expands or seperate each element</p>
+    <p>Notation as...(triple.dots)
+    </p>
+    <script>
+        let arr =[23,322,321,2321]
+        document.write(arr+'<br>');
+        console.log(...arr)
+        document.write(...arr+'<br>');
+
+        let arr1 =[4,5,...arr];
+        document.write(arr1)
+    // method 3
+    let a =[12,23,445,5656,45]
+    let b = [21,343,454,667,78]     //add the elements in user
+    let c =[...a,2,33,...b,22,43232,2223]
+    console.log(c)
+    // 4th ways
+    let str = "veera konda";
+    console.log(...str)
+    // 5th way
+    function sum(a,b,c,d){
+        console.log(a+b+c+d);
+    }
+    let arr7 =[10,20,30,40]
+    sum(...arr7)
+    </script>
+</body>
+</html>
